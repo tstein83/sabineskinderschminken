@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Hintergrund Kreis (optional) -->
+  <circle cx="100" cy="100" r="95" fill="#FFB3D1" opacity="0.3"/>
+
+  <!-- Kindergesicht -->
+  <circle cx="85" cy="90" r="40" fill="#FFE0B2" stroke="#FF6B9D" stroke-width="3"/>
+
+  <!-- Augen -->
+  <circle cx="75" cy="85" r="4" fill="#2C3E50"/>
+  <circle cx="95" cy="85" r="4" fill="#2C3E50"/>
+
+  <!-- Lächeln -->
+  <path d="M 70 95 Q 85 105 100 95" fill="none" stroke="#E54D7F" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Schmetterling auf Wange (Kinderschminken) -->
+  <g transform="translate(90, 75) scale(0.6)">
+    <ellipse cx="0" cy="0" rx="8" ry="5" fill="#FF6B9D"/>
+    <ellipse cx="0" cy="0" rx="5" ry="8" fill="#4ECDC4"/>
+    <ellipse cx="15" cy="0" rx="8" ry="5" fill="#FFE66D"/>
+    <ellipse cx="15" cy="0" rx="5" ry="8" fill="#FF6B9D"/>
+    <line x1="7.5" y1="-5" x2="7.5" y2="5" stroke="#2C3E50" stroke-width="1"/>
+    <circle cx="7.5" cy="0" r="2" fill="#2C3E50"/>
+  </g>
+
+  <!-- Pinsel -->
+  <g transform="translate(130, 130) rotate(-45)">
+    <!-- Pinselstiel -->
+    <rect x="0" y="0" width="8" height="60" rx="2" fill="#FFE66D" stroke="#F4D84A" stroke-width="1"/>
+
+    <!-- Metallring -->
+    <rect x="-2" y="55" width="12" height="8" fill="#95A5A6" stroke="#546E7A" stroke-width="1"/>
+
+    <!-- Pinselhaare -->
+    <path d="M 4 63 L 0 80 L 4 78 L 8 80 Z" fill="#4ECDC4"/>
+    <path d="M 4 63 L 2 75 L 4 73 L 6 75 Z" fill="#45B7AF"/>
+
+    <!-- Farbkleckse am Pinsel -->
+    <circle cx="10" cy="50" r="3" fill="#FF6B9D" opacity="0.7"/>
+    <circle cx="-2" cy="45" r="2.5" fill="#4ECDC4" opacity="0.7"/>
+  </g>
+
+  <!-- Farbkleckse/Sterne rundherum -->
+  <circle cx="40" cy="45" r="4" fill="#FFE66D" opacity="0.6"/>
+  <circle cx="155" cy="60" r="3" fill="#4ECDC4" opacity="0.6"/>
+  <circle cx="50" cy="140" r="3.5" fill="#FF6B9D" opacity="0.6"/>
+
+  <!-- Kleine Sterne -->
+  <path d="M 160 140 L 162 145 L 167 145 L 163 148 L 165 153 L 160 150 L 155 153 L 157 148 L 153 145 L 158 145 Z" fill="#FFE66D" opacity="0.7"/>
+  <path d="M 45 60 L 47 64 L 51 64 L 48 67 L 50 71 L 45 68 L 40 71 L 42 67 L 39 64 L 43 64 Z" fill="#4ECDC4" opacity="0.7"/>
+</svg>
