@@ -82,7 +82,7 @@ const galleryImages = [
 const galleryGrid = document.getElementById('galleryGrid');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
-// Render gallery
+// Render gallery - only first 6 images
 function renderGallery(filter = 'all') {
     galleryGrid.innerHTML = '';
 
@@ -90,7 +90,10 @@ function renderGallery(filter = 'all') {
         ? galleryImages
         : galleryImages.filter(img => img.category === filter);
 
-    filteredImages.forEach((image, index) => {
+    // Only show first 6 images
+    const limitedImages = filteredImages.slice(0, 6);
+
+    limitedImages.forEach((image, index) => {
         const galleryItem = document.createElement('div');
         galleryItem.className = 'gallery-item';
         galleryItem.dataset.index = index;
