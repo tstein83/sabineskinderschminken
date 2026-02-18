@@ -6,8 +6,22 @@
     <meta name="description" content="Sabines Kinderschminken - Professionelles Kinderschminken für Events, Geburtstage und Feste in Darmstadt, Frankfurt, Mannheim und Umgebung">
     <meta name="keywords" content="Kinderschminken, Facepainting, Ballon-Figuren, Kinderanimation, Darmstadt, Frankfurt, Mannheim">
     <title>Sabines Kinderschminken - Professionelles Kinderschminken & mehr</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- Fonts are now imported in CSS file -->
+
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Critical CSS inline for faster initial render -->
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:system-ui,-apple-system,sans-serif;color:#2d1b69;line-height:1.7;background:linear-gradient(135deg,#fff8f0 0%,#ffe6f7 50%,#f0f9ff 100%);overflow-x:hidden}
+        .header{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.95);z-index:1000;backdrop-filter:blur(10px)}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    </style>
+
+    <!-- Main CSS - loaded with media query trick for non-blocking -->
+    <link rel="stylesheet" href="styles/main.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles/main.css"></noscript>
 </head>
 <body>
     <!-- Header -->
@@ -531,6 +545,6 @@
         <img src="" alt="" class="lightbox-img" id="lightboxImg">
     </div>
 
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>

@@ -2,8 +2,8 @@
    Sabines Kinderschminken - MAGICAL RAINBOW EDITION ✨🌈🦋
    ======================================== */
 
-/* === Import Playful Fonts === */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Bubblegum+Sans&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap');
+/* === Import Playful Fonts - Optimized === */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Caveat:wght@600&family=Quicksand:wght@400;600&display=swap');
 
 /* === CSS Variables - RAINBOW PALETTE === */
 :root {
@@ -96,7 +96,7 @@ body {
     position: relative;
 }
 
-/* Magical sparkle background */
+/* Optimized sparkle background - static for performance */
 body::before {
     content: '';
     position: fixed;
@@ -108,25 +108,11 @@ body::before {
         radial-gradient(2px 2px at 20% 30%, white, transparent),
         radial-gradient(2px 2px at 60% 70%, rgba(255, 215, 0, 0.8), transparent),
         radial-gradient(1px 1px at 50% 50%, rgba(255, 105, 180, 0.6), transparent),
-        radial-gradient(1px 1px at 80% 10%, rgba(155, 89, 182, 0.6), transparent),
-        radial-gradient(2px 2px at 90% 60%, rgba(59, 130, 246, 0.5), transparent),
-        radial-gradient(1px 1px at 33% 80%, white, transparent);
-    background-size: 200% 200%, 180% 180%, 220% 220%, 250% 250%, 200% 200%, 180% 180%;
-    animation: sparkle 8s linear infinite;
+        radial-gradient(1px 1px at 80% 10%, rgba(155, 89, 182, 0.6), transparent);
+    background-size: 100% 100%;
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.6;
-}
-
-@keyframes sparkle {
-    0%, 100% {
-        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-        opacity: 0.6;
-    }
-    50% {
-        background-position: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-        opacity: 0.8;
-    }
+    opacity: 0.4;
 }
 
 img {
@@ -185,15 +171,9 @@ ul {
 @keyframes rainbow-shift {
     0% {
         background-position: 0% 50%;
-        filter: hue-rotate(0deg);
-    }
-    50% {
-        background-position: 100% 50%;
-        filter: hue-rotate(180deg);
     }
     100% {
-        background-position: 0% 50%;
-        filter: hue-rotate(360deg);
+        background-position: 100% 50%;
     }
 }
 
@@ -353,7 +333,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-8px) scale(1.08);
     box-shadow: 0 20px 60px rgba(255, 105, 180, 0.6),
                 0 10px 30px rgba(155, 89, 182, 0.5);
-    animation: rainbow-shift 3s ease infinite, pulse-glow 2s ease infinite;
 }
 
 .btn-primary::before {
@@ -525,12 +504,11 @@ h1, h2, h3, h4, h5, h6 {
         radial-gradient(circle at 80% 70%, rgba(155, 89, 182, 0.3) 0%, transparent 50%),
         radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.2) 0%, transparent 60%),
         linear-gradient(135deg, #fff8f0 0%, #ffe6f7 25%, #f0f9ff 50%, #fff3e6 75%, #ffe6f7 100%);
-    background-size: 200% 200%;
-    animation: rainbow-shift 20s ease infinite;
+    background-size: 100% 100%;
     z-index: -2;
 }
 
-/* Floating emoji decorations */
+/* Floating emoji decorations - optimized */
 .hero::before {
     content: '🎨 🦋 ⭐ 🌈 ✨ 🎪 🎭 🎉 💫 🌟';
     position: absolute;
@@ -539,10 +517,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     font-size: 3rem;
     text-align: center;
-    opacity: 0.4;
-    animation: float 8s ease-in-out infinite;
+    opacity: 0.3;
     pointer-events: none;
     letter-spacing: 40px;
+    will-change: transform;
 }
 
 .hero::after {
@@ -553,10 +531,11 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     font-size: 2.5rem;
     text-align: center;
-    opacity: 0.4;
-    animation: float 10s ease-in-out infinite reverse;
+    opacity: 0.3;
     pointer-events: none;
     letter-spacing: 40px;
+    will-change: transform;
+}
 }
 
 .hero-decoration {
@@ -572,7 +551,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     filter: blur(100px);
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 .blob-1 {
@@ -581,7 +560,6 @@ h1, h2, h3, h4, h5, h6 {
     background: radial-gradient(circle, var(--color-pink), var(--color-purple));
     top: -100px;
     right: -100px;
-    animation: float 15s ease-in-out infinite, rotate-slow 30s linear infinite;
 }
 
 .blob-2 {
@@ -590,7 +568,6 @@ h1, h2, h3, h4, h5, h6 {
     background: radial-gradient(circle, var(--color-cyan), var(--color-blue));
     bottom: -150px;
     left: -150px;
-    animation: float 18s ease-in-out infinite reverse, rotate-slow 35s linear infinite reverse;
 }
 
 .hero-content {
@@ -681,14 +658,13 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-/* Floating decorative emojis */
+/* Floating decorative emojis - static for performance */
 .section-header::before {
     content: '🌟';
     position: absolute;
     left: 20%;
     top: -30px;
     font-size: 3rem;
-    animation: float 5s ease-in-out infinite, twinkle 3s ease infinite;
 }
 
 .section-header::after {
@@ -697,7 +673,6 @@ h1, h2, h3, h4, h5, h6 {
     right: 20%;
     top: -30px;
     font-size: 3rem;
-    animation: float 5s ease-in-out infinite reverse, twinkle 3s ease infinite 1s;
 }
 
 .services-grid {
@@ -774,21 +749,20 @@ h1, h2, h3, h4, h5, h6 {
     height: 120px;
     margin: 0 auto var(--space-lg);
     background: var(--rainbow-gradient);
-    background-size: 400% 400%;
+    background-size: 200% 200%;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    animation: rainbow-shift 6s ease infinite, wiggle 4s ease-in-out infinite;
     box-shadow: 0 15px 40px rgba(255, 105, 180, 0.5);
     transform: rotate(0deg);
     font-size: 4rem;
+    transition: transform 0.3s ease;
 }
 
 .service-card:hover .service-icon {
-    animation: rainbow-shift 3s ease infinite, bounce 1s ease infinite;
-    transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2) rotate(15deg);
 }
 
 .service-icon svg {
@@ -1264,8 +1238,7 @@ h1, h2, h3, h4, h5, h6 {
         rgba(255, 243, 230, 0.9) 75%,
         rgba(255, 230, 247, 0.9) 100%
     );
-    background-size: 400% 400%;
-    animation: rainbow-shift 20s ease infinite;
+    background-size: 100% 100%;
     position: relative;
 }
 
